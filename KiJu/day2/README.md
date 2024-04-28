@@ -13,7 +13,7 @@
 <br>
 
 **Result Value** <br>
-3
+
 
 <br>
 
@@ -31,7 +31,7 @@ double double = 2.5;
 <br>
 
 **Result Value** <br>
-4
+
 
 <br>
 
@@ -53,23 +53,7 @@ System.out.println(pencilsLeft)
 
 **Result Value** <br>
 ```java
-package KNU_Package;
 
-public class KNU_Class {
-
-	public static void main(String[] args) {
-		int penclis = 534;
-		int studnets = 30;
-		
-		int pencilsPerStudent = (penclis / studnets);
-		System.out.println(pencilsPerStudent);
-		
-		int pencilsLeft = (penclis % studnets);
-		System.out.println(pencilsLeft);
-
-	}
-
-}
 ```
 
 <br>
@@ -83,7 +67,7 @@ double area = (						);
 System.out.println(area);
 ```
 
-<img src="https://github.com/ondacloud/KNU_Java_Study/raw/main/JunSung/day2/img/image-1.png" width="300" height="200"/>
+<img src="https://github.com/ondacloud/KNU_Java_Study/raw/main/KiJu/day2/img/image-1.png" width="300" height="200"/>
 
 1) (lengthTop+lengthBottom) * height / 2.0
 2) (lengthTop+lengthBottom) * height * 1.0 / 2
@@ -93,7 +77,7 @@ System.out.println(area);
 <br>
 
 **Result Value** <br>
-1, 2, 3
+
 
 <br>
 
@@ -103,21 +87,7 @@ System.out.println(area);
 
 **Result Value** <br>
 ```java
-package KNU_Package;
 
-public class KNU_Class {
-
-	public static void main(String[] args) {
-		int sum = 0;
-		for (int i=1; i <= 100; i++) {
-			if (i%3 == 0) {
-				sum += i;
-			}
-		}
-		System.out.println(sum);
-	}
-
-}
 ```
 
 <br>
@@ -128,20 +98,7 @@ public class KNU_Class {
 
 **Result Value** <br>
 ```java
-package KNU_Package;
 
-public class KNU_Class {
-
-	public static void main(String[] args) {
-		for (int x=1; x <= 10; x++) {
-			for (int y=1; y <= 10; y++) {
-				if (4*x + 5 * y == 60) {
-					System.out.println("("+ x + "," + y + ")");
-				}
-			}
-		}
-	}
-}
 ```
 
 <br>
@@ -178,47 +135,5 @@ public class KNU_Class {
 
 **Result Value** <br>
 ```java
-package KNU_Package;
-import java.util.*;
 
-public class KNU_Class {
-
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int money = 0;
-		
-		while(true) {
-			System.out.println("----------------------------");
-			System.out.println("1.예금 | 2.출금 | 3.잔고 | 4.종료");
-			System.out.println("----------------------------");
-			System.out.print("선택> ");
-			int num = sc.nextInt();
-			
-			if (num != 1 &&  num != 2 && num != 3 && num != 4) {
-				System.out.println("Error");
-			}
-			
-			if (num == 1) {
-				System.out.print("예금액> ");
-				int plus = sc.nextInt();
-				money += plus ;
-				
-			}
-			else if (num == 2) {
-				System.out.print("출금액> ");
-				int minus = sc.nextInt();
-				money -= minus;
-			}
-			else if (num == 3) {
-				System.out.println("잔고> " + money);
-			}
-			else if (num == 4) {
-				break;
-			}
-			System.out.println();
-		}
-		System.out.println();
-		System.out.println("프로그램 종료");
-	}
-}
 ```
