@@ -58,8 +58,7 @@ System.out.println(pencilsLeft)
 <br>
 
 ## 4. 다음 코드는 사다리꼴의 넓이를 구하는 코드입니다. 정확히 소수 자릿수가 나올 수 있도록 ( )에 들어갈 수 있는 코드를 모두 선택하세요.
-[Trapezoidal](https://github.com/ondacloud/KNU_Java_Study/raw/main/JunSung/day2/img/image-1.png)
-
+![Trapezoidal](https://github.com/ondacloud/KNU_Java_Study/raw/main/JunSung/day2/img/image-1.png)
 
 ```java
 int lengthTop = 5;
