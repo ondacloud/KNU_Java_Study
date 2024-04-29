@@ -21,7 +21,7 @@
 ```java
 byte byteValue = 10;
 float floatValue = 2.5F
-double double = 2.5;
+double doubleValue = 2.5;
 ```
 1) byte result = byteValue + byteValue;
 2) int result = 5 + byteValue;
@@ -31,7 +31,7 @@ double double = 2.5;
 <br>
 
 **Result Value** <br>
-4
+1
 
 <br>
 
@@ -122,7 +122,7 @@ public class KNU_Class {
 
 <br>
 
-## 5. 중첩 for문을 이용하여 방적식 4x + 5y = 60의 모든 해를 구해서 (x,y) 형태로 출력하는 코드를 작성해 보세요. 단, x와 y는 10 이하의 자연수입니다.
+## 6. 중첩 for문을 이용하여 방적식 4x + 5y = 60의 모든 해를 구해서 (x,y) 형태로 출력하는 코드를 작성해 보세요. 단, x와 y는 10 이하의 자연수입니다.
 
 <br>
 
@@ -146,7 +146,7 @@ public class KNU_Class {
 
 <br>
 
-## 6. while 문과 Scanner의 nextLine() 메소드를 이용해서 다음 실행 결과와 같이 키보드로부터 입력된 데이터로 예금, 출금, 조회, 종료 기능을 제공하는 코드를 작성해 보세요.
+## 7. while 문과 Scanner의 nextLine() 메소드를 이용해서 다음 실행 결과와 같이 키보드로부터 입력된 데이터로 예금, 출금, 조회, 종료 기능을 제공하는 코드를 작성해 보세요.
 ```java
 --------------------------------
 1.예금 | 2.출금 | 3.잔고 | 4.종료

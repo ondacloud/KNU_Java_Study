@@ -13,7 +13,7 @@
 <br>
 
 **Result Value** <br>
-
+3
 
 <br>
 
@@ -21,7 +21,7 @@
 ```java
 byte byteValue = 10;
 float floatValue = 2.5F
-double double = 2.5;
+double doubleValue = 2.5;
 ```
 1) byte result = byteValue + byteValue;
 2) int result = 5 + byteValue;
@@ -31,7 +31,7 @@ double double = 2.5;
 <br>
 
 **Result Value** <br>
-
+1
 
 <br>
 
@@ -53,7 +53,25 @@ System.out.println(pencilsLeft)
 
 **Result Value** <br>
 ```java
+package KNU_Package;
 
+import java.util.Scanner;
+
+public class KNU_Class {
+
+	public static void main(String[] args) {
+		
+		int a= 534;
+		int b=30;
+		
+		int c = a/b;
+		System.out.println(c);
+		
+		int d = a % b; //a-b*c
+		System.out.println(d);
+	}
+
+}
 ```
 
 <br>
@@ -77,7 +95,7 @@ System.out.println(area);
 <br>
 
 **Result Value** <br>
-
+1, 2, 3
 
 <br>
 
@@ -87,23 +105,62 @@ System.out.println(area);
 
 **Result Value** <br>
 ```java
+package KNU_Package;
 
+import java.util.Scanner;
+
+public class KNU_Class {
+
+	public static void main(String[] args) {
+		
+		int value = 0;
+		int num = 3;
+		int sum = 0;
+		for(int i = 1; value< 99; i++ ){
+		   value = num*i;
+		   sum += value;
+		   System.out.println(value);
+		}
+		System.out.println(value);
+		System.out.println(sum);
+		
+		
+	}
+
+}
 ```
 
 <br>
 
-## 5. 중첩 for문을 이용하여 방적식 4x + 5y = 60의 모든 해를 구해서 (x,y) 형태로 출력하는 코드를 작성해 보세요. 단, x와 y는 10 이하의 자연수입니다.
+## 6. 중첩 for문을 이용하여 방적식 4x + 5y = 60의 모든 해를 구해서 (x,y) 형태로 출력하는 코드를 작성해 보세요. 단, x와 y는 10 이하의 자연수입니다.
 
 <br>
 
 **Result Value** <br>
 ```java
+package KNU_Package;
 
+import java.util.Scanner;
+
+public class KNU_Class {
+
+	public static void main(String[] args) {
+		for(int x=1; x<=10; x++){
+		   for(int y=1; y<=10; y++){
+			   
+		      if(4*x+5*y==60){
+		         System.out.println("("+x+","+y+")");
+		      }
+		   }
+		}
+		
+	}
+}
 ```
 
 <br>
 
-## 6. while 문과 Scanner의 nextLine() 메소드를 이용해서 다음 실행 결과와 같이 키보드로부터 입력된 데이터로 예금, 출금, 조회, 종료 기능을 제공하는 코드를 작성해 보세요.
+## 7. while 문과 Scanner의 nextLine() 메소드를 이용해서 다음 실행 결과와 같이 키보드로부터 입력된 데이터로 예금, 출금, 조회, 종료 기능을 제공하는 코드를 작성해 보세요.
 ```java
 --------------------------------
 1.예금 | 2.출금 | 3.잔고 | 4.종료
@@ -135,5 +192,39 @@ System.out.println(area);
 
 **Result Value** <br>
 ```java
+package KNU_Package;
 
+import java.util.Scanner;
+
+public class KNU_Class {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+
+		int in, out, remain=0;
+		while(true){
+		   System.out.println("----------------------------\n1.예금 | 2.출금 | 3.잔고 | 4.종료\n----------------------------");
+		   System.out.print("선택> ");
+		   int sel = sc.nextInt();
+		  
+		   if(sel==1){
+		      System.out.print("예금액> "); 
+		      in = sc.nextInt();
+		      remain += in;
+		   }else if(sel==2){
+		      System.out.print("출금액> "); 
+		      out = sc.nextInt();
+		      remain -= out;
+		   }else if(sel==3) {       
+		      System.out.println("잔액> "+remain); 
+		   }else if(sel==4) {       
+		      System.out.println("종료> ");   
+		      System.out.println();
+		      System.out.println("프로그램을 종료합니다.");
+		      break;  
+		   }
+		}	
+	}
+}
 ```
