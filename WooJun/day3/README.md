@@ -9,7 +9,48 @@ result> [10, 9, 8, 7, 6, 5, 4, 3]
 
 **Result Value** <br>
 ```java
+package KNU_Package;
+import java.util.Arrays;
+import java.util.Scanner;
 
+public class KNU_Class03 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("start_num> ");
+		int start_num = sc.nextInt();
+		
+		System.out.print("end_num> ");
+		int end_num = sc.nextInt();
+		
+		int size = start_num - end_num >= 0 ? start_num - end_num + 1: end_num - start_num + 1;
+		
+		int[] result = new int[size];
+		int j = 0;
+		
+		if(start_num - end_num >= 0) {
+			for(int i = start_num; i>=end_num; i--) {
+				if(j<size) {
+					result[j] = i;
+					j++;
+				}
+			}
+		}else {
+			for(int i = start_num; i<=end_num; i++) {
+				if(j<size) {
+					result[j] = i;
+					j++;
+				}
+			}
+		}
+		
+		System.out.println(Arrays.toString(result));
+		
+	}
+
+}
 ```
 
 <br>
@@ -25,7 +66,33 @@ output> aPPLE
 
 **Result Value** <br>
 ```java
+package KNU_Package;
+import java.util.Arrays;
+import java.util.Scanner;
 
+public class KNU_Class03 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("input> ");
+		String input = sc.nextLine();
+		
+		String output = "";
+		for(int i = 0; i < input.length(); i++ ) {
+			char ch = input.charAt(i);
+			if((ch >= 65)&&(ch<=96)) {
+				output += input.valueOf(ch).toLowerCase();
+				
+			}else if((ch>=97)&&(ch<=128)) {
+				output += input.valueOf(ch).toUpperCase();
+				
+			}
+		}
+		System.out.println("output> "+output);
+	}
+}
 ```
 
 <br>
@@ -40,7 +107,29 @@ output> Helloorld
 
 **Result Value** <br>
 ```java
+package KNU_Package;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.StringTokenizer;
 
+public class KNU_Class03 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		String input = "";
+		String output = "";
+		int num;
+		
+		System.out.print("input> ");
+		input = sc.next();
+		num = sc.nextInt();
+		
+		output = input.substring(0, num-1)+input.substring(num, input.length());
+		
+		System.out.println(output);
+	}
+}
 ```
 
 <br>
@@ -63,5 +152,62 @@ output> 프로그램을 종료합니다.
 
 **Result Value** <br>
 ```java
+package KNU_Package;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.StringTokenizer;
 
+public class KNU_Class03 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		String input = "";
+		String output = "";
+		
+		
+		while(true) {
+			System.out.print("day> ");
+			input = sc.nextLine();
+			int year = Integer.valueOf(input.substring(0, 4));
+			int month = Integer.valueOf(input.substring(5));
+			
+			if(year == 0) {
+				if(month == 0) {
+					System.out.println("프로그램을 종료합니다.");
+					break;
+				}else {
+					System.out.println("프로그램을 종료하려면 0000-00을 입력하세요.");
+				}
+			}else {
+				switch(month) {
+				case 1 :
+				case 3 :
+				case 5 :
+				case 7 :
+				case 8 :
+				case 10 :
+				case 12 :	
+					System.out.println("31");
+					break;
+				case 2 : 
+					if((year%4==0)&&(year%100!=0)) {
+						System.out.println("29");
+					}else {
+						System.out.println("28");
+					}
+					break;	
+				case 4 :
+				case 6 :
+				case 9 :
+				case 11 :	
+					System.out.println("30");
+					break;	
+				}
+			}
+		}
+		
+	}
+
+}
 ```

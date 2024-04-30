@@ -180,55 +180,49 @@ public class KNU_Class {
 **Result Value** <br>
 ```java
 package KNU_Package;
-import java.util.*;
+
+import java.util.Scanner;
 
 public class KNU_Class {
 
 	public static void main(String[] args) {
-		Scanner Sc = new Scanner(System.in);
-
-		int Plus = 0;
-		int Minus = 0;
-		int Bank = 0;
-
-		while(true) {
-			System.out.println("""
-			-----------------------------
-			1.예금 | 2.출금 | 3.잔고 | 4.종료
-			-----------------------------
-			""");
-			System.out.print("원하시는 서비스를 선택해주세요 >>");
-
-			int Num = Sc.nextInt();
-			if(Num == 1) {
-				System.out.println("선택>1");
-				System.out.print("예금액>");
-				int DM = Sc.nextInt();
-				Plus += DM;
-				System.out.println(DM);
-			}
-
-			if(Num == 2) {
-				System.out.println("선택>2");
-				System.out.print("예금액>");
-				int GD = Sc.nextInt();
-				Minus += GD;
-				System.out.println(GD);
-			}
-
-			if(Num == 3) {
-				System.out.println("선택>3");
-				System.out.print("잔고>");
-				Bank = Plus - Minus;
-				System.out.println(Bank);
-			}
-
-			if(Num == 4) {
-				break;
-			}
-		}
-		System.out.println();
-		System.out.println("프로그램 종료");
-	}
+        Scanner Sc = new Scanner(System.in);
+                
+        int Plus = 0;
+        int Minus = 0;
+        int Bank =0;
+        
+        while(true) {
+            System.out.print("""
+            -----------------------------
+            1.예금 | 2.출금 | 3.잔고 | 4.종료
+            -----------------------------
+            """);
+            System.out.print("선택> ");
+            int Num = Sc.nextInt();
+            
+            if(Num == 1) {
+                System.out.print("예금액> ");
+                int DM = Sc.nextInt();
+                Plus += DM;
+            }
+            if(Num == 2) {
+                System.out.print("출금액> ");
+                int GD = Sc.nextInt();
+                Minus += GD;
+            }
+            if(Num == 3) {
+                System.out.print("잔고> ");
+                Bank = Plus - Minus;
+                System.out.println(Bank);
+            }
+            if(Num == 4) {
+                break;
+            }
+            System.out.println();
+      }
+        System.out.println();
+        System.out.println("프로그램 종료");
+    }
 }
 ```

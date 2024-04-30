@@ -9,7 +9,46 @@ result> [10, 9, 8, 7, 6, 5, 4, 3]
 
 **Result Value** <br>
 ```java
+package KNU_package;
+import java.util.Scanner;
+import java.util.Arrays;
 
+public class KNU_class {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int insert;
+		
+		System.out.print("start_num >");
+		int start_num = sc.nextInt();
+		System.out.print("end_num >");
+		int end_num = sc.nextInt();
+		
+		int n = start_num-end_num;
+		
+		int[] arr = new int[n];
+		
+		
+		for(int i =0;i<n;i++) {
+			arr[i] = start_num;
+			start_num--;
+		}
+		if(n == 0) {
+			System.out.print("result> ["+start_num+"]");
+		}
+		else {
+			System.out.print("result> [");
+			for(int i = 0;i<n;i++) {
+				System.out.print(arr[i]);
+				if(i != n-1) {
+					System.out.print(",");
+				}
+				else System.out.print("]");
+			}
+		}
+	}
+
+}
 ```
 
 <br>
@@ -25,7 +64,38 @@ output> aPPLE
 
 **Result Value** <br>
 ```java
+package KNU_package;
+import java.util.*;
 
+
+public class KNU_class {
+	public static final int N=100;
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("input>");
+		String input = sc.nextLine();
+		int tmp;
+		String output = "";
+		
+		int size = input.length();
+		
+		for(int i = 0;i<size;i++) {
+			tmp = (int)input.charAt(i);
+			
+			if((65 <= tmp) &&(tmp <=90)) {
+				output +=(char)(tmp+32);
+			}
+			else if( (97 <= tmp)&&(tmp<=122) ) {
+				output += (char)(tmp-32);
+			}
+			else {
+				output +=(char)tmp;
+			}
+		}
+		System.out.print("output> "+output);
+	}
+}
 ```
 
 <br>
@@ -45,14 +115,14 @@ output> Helloorld
 
 <br>
 
-## 4 while문과 switch & casse를 코드에 포함하여 코드를 구현합니다. 사용자는 1부터 12 사이의 정수를 입력하며. 해당 월을 마지막 일을 출력합니다. 사용자가 2월을 입력했을 때, 윤년 여부를 고려하여 28일 또는 29일을 출력해야 합니다. 아래를 참고하여 구성합니다.
+## 4 while문과 switch & case를 코드에 포함하여 코드를 구현합니다. 사용자는 1부터 12 사이의 정수를 입력하며. 해당 월을 마지막 일을 출력합니다. 사용자가 2월을 입력했을 때, 윤년 여부를 고려하여 28일 또는 29일을 출력해야 합니다. 아래를 참고하여 구성합니다.
 ```
 ex)
 
 day> 2024-02
 output> 29
 
-dayh> 2024-04
+day> 2024-04
 output> 30
 
 day> 0000-00
