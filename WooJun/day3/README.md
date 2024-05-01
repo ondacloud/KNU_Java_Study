@@ -157,7 +157,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class KNU_Class03 {
+public class KNU_Class {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

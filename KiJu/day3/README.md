@@ -133,5 +133,50 @@ output> 프로그램을 종료합니다.
 
 **Result Value** <br>
 ```java
+package KNU_Package;
+import java.util.*;
 
+public class KNU_Class {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		String input = "";
+		String output = "";
+		
+		
+		while(true) {
+			System.out.print("day> ");
+			input = sc.nextLine();
+			int year = Integer.valueOf(input.substring(0, 4));
+			int month = Integer.valueOf(input.substring(5));
+			
+			if(year == 0) {
+				if(month == 0) {
+					System.out.println("프로그램을 종료합니다.");
+					break;
+				}
+			}
+			else {
+				switch(month) {
+				case 1 : case 3 : case 5 : case 7 : case 8 : case 10 : case 12 :	
+					System.out.println("31");
+					break;
+				case 2 : 
+					if((year%4==0)&&(year%100!=0)) {
+						System.out.println("29");
+					}else {
+						System.out.println("28");
+					}
+					break;	
+				case 4 : case 6 : case 9 : case 11 :	
+					System.out.println("30");
+					break;	
+				}
+			}
+		}
+		
+	}
+
+}
 ```
