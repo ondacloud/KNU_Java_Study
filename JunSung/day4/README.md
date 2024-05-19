@@ -200,6 +200,17 @@ public class Main {
 
 <br>
 
+## Fame
+```java
+package Fun_game;
+
+public interface Fame {
+	abstract void fame_up();
+}
+```
+
+<br>
+
 ## Raise
 ```java
 package Fun_game;
@@ -209,17 +220,6 @@ public abstract class Raise {
 	
 	public abstract int work(int money);
 	public abstract int buy_person(int money);
-}
-```
-
-<br>
-
-## Fame
-```java
-package Fun_game;
-
-public interface Fame {
-	abstract void fame_up();
 }
 ```
 
